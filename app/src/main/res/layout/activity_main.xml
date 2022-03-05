@@ -11,11 +11,12 @@
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#0099cc"
+        android:background="@drawable/card_background"
+        android:elevation="5dp"
         android:gravity="center"
         android:text="Who is the 44th President of the United States?"
         android:textSize="40sp"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/flashcard_answer"
@@ -24,7 +25,44 @@
         android:background="#ffff55"
         android:gravity="center"
         android:text="Barack Obama"
-        android:textSize="40sp"
         android:textColor="#000000"
-        android:visibility="invisible"/>
+        android:textSize="40sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/choice1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/flashcard_answer"
+        android:layout_margin="15dp"
+        android:background="#efbdaf"
+        android:gravity="center"
+        android:text="Bill Clinton"
+        android:textColor="#013070"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/choice2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/choice1"
+        android:layout_margin="15dp"
+        android:background="#efbdaf"
+        android:gravity="center"
+        android:text="George H.W. Bush"
+        android:textColor="#013070"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/choice3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/choice2"
+        android:layout_margin="15dp"
+        android:background="#efbdaf"
+        android:gravity="center"
+        android:text="Barack Obama"
+        android:textColor="#013070"
+        android:textSize="35sp" />
+
 </RelativeLayout>
