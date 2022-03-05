@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         TextView choice1 = findViewById(R.id.choice1);
         TextView choice2 = findViewById(R.id.choice2);
         TextView choice3 = findViewById(R.id.choice3);
+        ImageView hideChoice = findViewById(R.id.toggle_choices_visibility);
 
         question.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,5 +61,28 @@ public class MainActivity extends AppCompatActivity {
                 choice3.setBackgroundColor(getResources().getColor(R.color.my_green_color,null));
             }
         });
+
+        final boolean[] isShowingAnswers = new boolean[1];
+        isShowingAnswers[0] = true;
+        hideChoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isShowingAnswers[0]) {
+                    hideChoice.setImageResource(R.drawable.eye1);
+                    choice1.setVisibility(View.INVISIBLE);
+                    choice2.setVisibility(View.INVISIBLE);
+                    choice3.setVisibility(View.INVISIBLE);
+                    isShowingAnswers[0] = false;
+                }else if (!isShowingAnswers[0]){
+                    hideChoice.setImageResource(R.drawable.eye2);
+                    choice1.setVisibility(View.VISIBLE);
+                    choice2.setVisibility(View.VISIBLE);
+                    choice3.setVisibility(View.VISIBLE);
+                    isShowingAnswers[0] = true;
+                }
+            }
+        });
+
+
     }
 }
