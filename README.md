@@ -1,6 +1,6 @@
 ## Flashcard App
 
-## Lab 2: Flashcard Card
+## Lab 2
 
 ### App Description
 A flashcard app that is allows users to add a question and answer.
